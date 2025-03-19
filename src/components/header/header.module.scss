@@ -1,0 +1,70 @@
+// @import '@styles/variables.scss';
+@use '@styles/colors.scss' as *;
+@use '@styles/variables.scss' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.headerFullWidth {
+  display: flex;
+  align-items: center;
+  min-height: 170px;
+  background-color: rgba($color: $white, $alpha: 0.2);
+  width: 100%;
+  position: absolute;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba($color: $white, $alpha: 0.2);
+  padding: 8px 16px 20px;
+
+  & > :last-child {
+    padding-right: 100px;
+  }
+}
+
+.headerWrapperFullWidth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.item {
+  a {
+    font-size: $fs20;
+    font-weight: $fw600;
+    color: $white;
+    text-decoration: none;
+    text-decoration-color: $accent;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: $accent;
+    }
+  }
+}
+
+.logo {
+  max-height: 94px;
+}
+
+.buttons {
+  & > :first-child {
+    margin-right: 10px;
+  }
+}

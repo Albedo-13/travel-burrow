@@ -1,0 +1,56 @@
+@use 'colors' as *;
+@use 'variables' as *;
+
+@mixin button {
+  color: $white;
+  font-weight: $fw600;
+  font-size: $fs20;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.buttonBase {
+  @include button;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.buttonPrimary {
+  @include button;
+  padding: 10px 24px;
+  background-color: $accent;
+
+  &:hover {
+    color: $dark;
+  }
+}
+
+.buttonOutlineBase {
+  @include button;
+  color: $white;
+  border: 1px solid $white;
+  padding: 10px 24px;
+  background-color: transparent;
+
+  &:hover {
+    border-color: $accent;
+    color: $accent;
+  }
+}
+
+.buttonOutlineAccent {
+  @include button;
+  color: $accent;
+  border: 1px solid $accent;
+  padding: 10px 24px;
+  background-color: transparent;
+
+  &:hover {
+    border-color: $white;
+    color: $white;
+  }
+}
