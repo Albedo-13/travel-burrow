@@ -3,6 +3,7 @@
 @use '@styles/variables.scss' as *;
 
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
   position: absolute;
@@ -11,15 +12,16 @@
 }
 
 .headerFullWidth {
+  width: 100%;
   display: flex;
   align-items: center;
   min-height: 170px;
   background-color: rgba($color: $white, $alpha: 0.2);
-  width: 100%;
   position: absolute;
 }
 
 .headerWrapper {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,6 +34,7 @@
 }
 
 .headerWrapperFullWidth {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;

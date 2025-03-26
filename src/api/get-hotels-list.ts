@@ -1,15 +1,13 @@
 import axios from 'axios';
 
 export async function getHotelsList() {
-  await new Promise((resolve) => setTimeout(resolve, 100));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return axios
     .get('https://hotels4.p.rapidapi.com/properties/list', options)
     .then((res) => {
       console.log(res.data);
-    })
-    .then((res) => {
-      return res;
+      return res.data;
     });
 }
 

@@ -32,7 +32,8 @@
       "@mocks/*": ["src/mocks/*"],
       "@stores/*": ["src/stores/*"],
       "@styles/*": ["src/styles/*"],
-      "@types/*": ["src/types/*"]
+      "@types/*": ["src/types/*"],
+      "@fonts/*": ["src/fonts/*"],
     }
   },
   "include": ["src"]

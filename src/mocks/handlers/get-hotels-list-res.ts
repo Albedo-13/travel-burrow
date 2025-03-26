@@ -1,3 +1,4 @@
+import hotelThumbPlaceholder from '@assets/images/hotel-thumb-placeholder.webp';
 import { http, HttpResponse } from 'msw';
 
 export const getHotelsListMockRes = http.get(
@@ -243,8 +244,7 @@ export const getHotelsListMockRes = http.get(
               {
                 id: 256601,
                 name: 'Lexington Inn at JFK Airport',
-                thumbnailUrl:
-                  'https://exp.cdn-hotels.com/hotels/2000000/1710000/1705900/1705822/744a2280_l.jpg',
+                thumbnailUrl: `${hotelThumbPlaceholder}`,
                 starRating: 2.5,
                 address: {
                   streetAddress: '138 05 Jamaica Ave',
@@ -540,8 +540,7 @@ export const getHotelsListMockRes = http.get(
               {
                 id: 340668,
                 name: 'Rodeway Inn Meadowlands',
-                thumbnailUrl:
-                  'https://exp.cdn-hotels.com/hotels/4000000/3410000/3402500/3402469/89f044a6_l.jpg',
+                thumbnailUrl: `${hotelThumbPlaceholder}`,
                 starRating: 2,
                 address: {
                   streetAddress: '155 Route 3 East',
@@ -612,8 +611,7 @@ export const getHotelsListMockRes = http.get(
               {
                 id: 205823,
                 name: 'Knights Inn South Hackensack',
-                thumbnailUrl:
-                  'https://exp.cdn-hotels.com/hotels/1000000/900000/894700/894631/0443d16b_l.jpg',
+                thumbnailUrl: `${hotelThumbPlaceholder}`,
                 starRating: 2,
                 address: {
                   streetAddress: '410 Rt 46 West I 80 Exit 64',
@@ -755,8 +753,7 @@ export const getHotelsListMockRes = http.get(
               {
                 id: 222985,
                 name: 'The Solita Soho Hotel, Ascend Hotel Collection',
-                thumbnailUrl:
-                  'https://exp.cdn-hotels.com/hotels/2000000/1110000/1107500/1107496/9ab453f0_l.jpg',
+                thumbnailUrl: `${hotelThumbPlaceholder}`,
                 starRating: 3,
                 address: {
                   streetAddress: '159 Grand St',
@@ -906,8 +903,7 @@ export const getHotelsListMockRes = http.get(
               {
                 id: 116796,
                 name: 'Holiday Inn Newark Airport',
-                thumbnailUrl:
-                  'https://exp.cdn-hotels.com/hotels/1000000/20000/15700/15651/bb878191_l.jpg',
+                thumbnailUrl: `${hotelThumbPlaceholder}`,
                 starRating: 3.5,
                 address: {
                   streetAddress: '450 US Highway One and Nine South',
@@ -980,8 +976,7 @@ export const getHotelsListMockRes = http.get(
               {
                 id: 200301,
                 name: 'Comfort Suites Newark - Harrison',
-                thumbnailUrl:
-                  'https://exp.cdn-hotels.com/hotels/1000000/860000/859300/859293/5b861c8c_l.jpg',
+                thumbnailUrl: `${hotelThumbPlaceholder}`,
                 starRating: 2.5,
                 address: {
                   streetAddress: '1348 Mccarter Hwy',

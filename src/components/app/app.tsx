@@ -2,7 +2,8 @@ import { Header } from '@components/header/header';
 import { WelcomeHome } from '@components/welcome-home/welcome-home';
 import { observer } from 'mobx-react-lite';
 
-import { getHotelsList } from '@/api/get-hotels-list';
+// import { getHotelsList } from '@/api/get-hotels-list';
+import { PopularHotels } from '../popular-hotels/popular-hotels';
 // import { useStores } from '@/hooks/use-stores';
 
 // const options = {
@@ -32,8 +33,10 @@ export const App = observer(() => {
     <>
       <Header isFullWidth={true} />
       <WelcomeHome />
+      <PopularHotels />
 
-      <button
+      <div style={{ height: 200, backgroundColor: 'antiquewhite' }}></div>
+      {/* <button
         style={{
           marginRight: '8px',
           border: '1px solid white',
@@ -43,7 +46,7 @@ export const App = observer(() => {
         onClick={getHotelsList}
       >
         fetch
-      </button>
+      </button> */}
     </>
   );
 });

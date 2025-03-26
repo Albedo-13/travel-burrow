@@ -15,6 +15,7 @@ export default defineConfig({
       '@stores': path.resolve(__dirname, './src/stores'),
       '@styles': path.resolve(__dirname, './src/styles'),
       '@types': path.resolve(__dirname, './src/types'),
+      '@fonts': path.resolve(__dirname, './src/fonts'),
     },
   },
   plugins: [react()],

@@ -26,6 +26,19 @@
 
   &:hover {
     color: $dark;
+    opacity: 0.75;
+  }
+}
+
+.buttonSecondary {
+  @include button;
+  padding: 10px 24px;
+  background-color: $gray;
+
+  &:hover {
+    background-color: $dark;
+    color: $white;
+    opacity: 0.33;
   }
 }
 
