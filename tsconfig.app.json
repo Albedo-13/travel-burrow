@@ -34,6 +34,7 @@
       "@styles/*": ["src/styles/*"],
       "@types/*": ["src/types/*"],
       "@fonts/*": ["src/fonts/*"],
+      "@pages/*": ["src/pages/*"],
     }
   },
   "include": ["src"]

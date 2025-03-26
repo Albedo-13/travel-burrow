@@ -1,11 +1,6 @@
 @use '@styles/colors' as *;
 @use '@styles/variables' as *;
 
-@import 'swiper/css/pagination';
-@import 'swiper/css/scrollbar';
-@import 'swiper/css';
-@import 'swiper/css/effect-coverflow';
-
 .popularHotels {
   padding: 120px 0 60px 0;
 }

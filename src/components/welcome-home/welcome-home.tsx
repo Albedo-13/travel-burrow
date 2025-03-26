@@ -10,7 +10,6 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { observer } from 'mobx-react-lite';
-import { useEffect } from 'react';
 
 import { MAX_HOTEL_PRICE, MIN_HOTEL_PRICE } from '@/constants';
 import { useStores } from '@/hooks/use-stores';
@@ -19,12 +18,8 @@ import styles from './welcome-home.module.scss';
 
 export const WelcomeHome = observer(() => {
   const {
-    hotelsStore: { hotelsList, currency, getHotelsListAction },
+    hotelsStore: { hotelsList, currency },
   } = useStores();
-
-  useEffect(() => {
-    getHotelsListAction();
-  }, [getHotelsListAction]);
 
   return (
     <section className={styles.welcome}>

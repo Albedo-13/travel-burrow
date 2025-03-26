@@ -1,0 +1,60 @@
+@use '@styles/colors' as *;
+@use '@styles/variables' as *;
+
+.aboutUs {
+  padding: 60px 0;
+}
+
+.image {
+  width: 450px;
+  height: auto;
+}
+
+.aboutUsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contentWrapper {
+  max-width: 50%;
+}
+
+.subtitle {
+  font-weight: $fw600;
+  font-size: $fs16;
+  color: $dark;
+  opacity: 0.6;
+}
+
+.title {
+  font-weight: $fw800;
+  font-size: $fs32;
+  color: $dark;
+  margin-top: 6px;
+}
+
+.text {
+  font-weight: $fw400;
+  font-size: $fs18;
+  line-height: 178%;
+  color: $dark;
+  margin-top: 32px;
+}
+
+.stats {
+  margin-top: 32px;
+  display: flex;
+  gap: 50px;
+  color: $accent;
+  font-weight: $fw700;
+  font-size: $fs32;
+
+  .statsText {
+    font-weight: $fw400;
+    font-size: $fs16;
+    color: $dark;
+    opacity: 0.6;
+    margin-top: 6px;
+  }
+}

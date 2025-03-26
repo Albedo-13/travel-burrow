@@ -1,0 +1,42 @@
+@use '@styles/colors' as *;
+@use '@styles/variables' as *;
+
+.specialOffers {
+  margin-top: 120px;
+  min-height: 330px;
+  padding: 60px 0;
+
+  background: rgb(255, 204, 165);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 204, 165, 1) 0%,
+    rgba(255, 204, 165, 1) 20%,
+    rgba(255, 220, 194, 1) 100%
+  );
+  position: relative;
+}
+
+.underlay {
+  background-color: rgba($color: $white, $alpha: 0.2);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 569px;
+  text-align: center;
+}
+
+.title {
+  font-weight: $fw800;
+  font-size: $fs32;
+  color: $dark;
+}
+
+.text {
+  margin: 32px 0;
+  line-height: 144%;
+}
+
+.image {
+  position: absolute;
+  right: 0;
+  bottom: -72px;
+}

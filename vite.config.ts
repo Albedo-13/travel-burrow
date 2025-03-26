@@ -16,6 +16,7 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
       '@types': path.resolve(__dirname, './src/types'),
       '@fonts': path.resolve(__dirname, './src/fonts'),
+      '@pages': path.resolve(__dirname, './src/pages'),
     },
   },
   plugins: [react()],
