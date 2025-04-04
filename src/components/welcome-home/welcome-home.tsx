@@ -1,9 +1,11 @@
+import { useStores } from '@hooks/use-stores';
 import HotelIcon from '@mui/icons-material/Hotel';
 import PersonIcon from '@mui/icons-material/Person';
 import PublicIcon from '@mui/icons-material/Public';
 import SearchIcon from '@mui/icons-material/Search';
-import { InputAdornment, Slider } from '@mui/material';
 import Autocomplete from '@mui/material/Autocomplete';
+import InputAdornment from '@mui/material/InputAdornment';
+import Slider from '@mui/material/Slider';
 import TextField from '@mui/material/TextField';
 import { TimePicker } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -12,9 +14,10 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { observer } from 'mobx-react-lite';
 
 import { MAX_HOTEL_PRICE, MIN_HOTEL_PRICE } from '@/constants';
-import { useStores } from '@/hooks/use-stores';
 
 import styles from './welcome-home.module.scss';
+
+// TODO: тяжелый компонент из-за mui, вынести форму в отдельный компонент и lazy load со скелетоном
 
 export const WelcomeHome = observer(() => {
   const {
@@ -77,7 +80,7 @@ export const WelcomeHome = observer(() => {
 
             <Autocomplete
               options={hotelsList}
-              getOptionLabel={(option) => option.name}
+              getOptionLabel={(option) => option?.name}
               renderInput={(params) => (
                 <TextField
                   {...params}
@@ -85,6 +88,7 @@ export const WelcomeHome = observer(() => {
                   placeholder="Select Hotel"
                   slotProps={{
                     input: {
+                      ...params.InputProps,
                       startAdornment: (
                         <InputAdornment position="start">
                           <HotelIcon />

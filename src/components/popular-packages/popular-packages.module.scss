@@ -1,0 +1,75 @@
+@use '@styles/colors' as *;
+@use '@styles/variables' as *;
+
+.popularPackages {
+  padding: 120px 0 60px 0;
+}
+
+.title {
+  font-weight: $fw800;
+  font-size: $fs32;
+}
+
+.wrapper {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  flex: calc(25% - 17px);
+  min-width: 300px;
+  max-width: 300px;
+  border: 1px solid $gray;
+  border-radius: 24px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 25px;
+}
+
+.name {
+  font-weight: $fw800;
+  font-size: $fs20;
+}
+
+.price {
+  margin-top: 16px;
+  color: rgba($color: $dark, $alpha: 0.6);
+
+  .symbol {
+    display: inline;
+    position: relative;
+    top: -20px;
+  }
+
+  span {
+    margin: 0 5px;
+    font-weight: $fw700;
+    font-size: $fs48;
+    color: $accent;
+  }
+}
+
+.benefits {
+  margin-top: 16px;
+
+  .benefit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 0;
+  }
+}
+
+.button {
+  margin-top: 16px;
+  width: 100%;
+}

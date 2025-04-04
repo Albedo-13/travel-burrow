@@ -1,5 +1,6 @@
 import 'swiper/css';
 
+import { useStores } from '@hooks/use-stores';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { Rating, Skeleton } from '@mui/material';
 import clsx from 'clsx';
@@ -7,8 +8,6 @@ import { observer } from 'mobx-react-lite';
 import { useRef } from 'react';
 import Swiper from 'swiper';
 import { Swiper as SwiperComponent, SwiperSlide } from 'swiper/react';
-
-import { useStores } from '@/hooks/use-stores';
 
 import styles from './popular-hotels.module.scss';
 

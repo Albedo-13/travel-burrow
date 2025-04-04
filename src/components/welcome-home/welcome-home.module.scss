@@ -1,10 +1,11 @@
 @use '@styles/colors' as *;
 @use '@styles/variables' as *;
+@use '@styles/mixins' as *;
 
 .welcome {
   min-height: 1020px;
   background: center center / cover no-repeat
-    url('../../assets/images/home-page-bg.png');
+    url('../../assets/images/home-page-bg.webp');
 
   display: flex;
   flex-direction: column;
@@ -30,7 +31,7 @@
 }
 
 .underlay {
-  background-color: rgba($color: $white, $alpha: 0.2);
+  @include underlayBackground();
   padding: 20px;
   border-radius: 12px;
 }

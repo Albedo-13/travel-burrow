@@ -1,0 +1,15 @@
+@use '@styles/colors' as *;
+
+@mixin gradientBackground() {
+  background: rgb(255, 204, 165);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 204, 165, 1) 0%,
+    rgba(255, 204, 165, 1) 20%,
+    rgba(255, 220, 194, 1) 100%
+  );
+}
+
+@mixin underlayBackground() {
+  background-color: rgba(255, 255, 255, 0.2);
+}

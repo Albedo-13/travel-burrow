@@ -1,4 +1,4 @@
-import image from '@assets/images/about-woman.png';
+import image from '@assets/images/about-woman.webp';
 
 import styles from './about-us-home.module.scss';
 

@@ -8,14 +8,12 @@
 .title {
   font-weight: $fw800;
   font-size: $fs32;
-  color: $dark;
   margin-bottom: 60px;
 }
 
 .name {
   font-weight: $fw700;
   font-size: $fs24;
-  color: $dark;
   margin-top: 16px;
   white-space: nowrap;
   overflow: hidden;
@@ -26,7 +24,6 @@
   font-weight: $fw600;
   font-size: $fs18;
   margin-top: 12px;
-  color: $dark;
 
   & > span {
     font-weight: $fw800;
@@ -81,5 +78,4 @@
   margin-top: 12px;
   font-weight: $fw600;
   font-size: $fs18;
-  color: $dark;
 }

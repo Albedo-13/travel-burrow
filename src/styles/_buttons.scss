@@ -50,8 +50,7 @@
   background-color: transparent;
 
   &:hover {
-    border-color: $accent;
-    color: $accent;
+    opacity: 0.6;
   }
 }
 
@@ -63,7 +62,6 @@
   background-color: transparent;
 
   &:hover {
-    border-color: $white;
-    color: $white;
+    opacity: 0.6;
   }
 }

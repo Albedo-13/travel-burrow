@@ -1,6 +1,6 @@
 import '@styles/_buttons.scss';
 
-import logo from '@assets/icons/logo.png';
+import logo from '@assets/icons/logo.webp';
 import clsx from 'clsx';
 
 import styles from './header.module.scss';

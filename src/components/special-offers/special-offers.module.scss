@@ -1,23 +1,17 @@
 @use '@styles/colors' as *;
 @use '@styles/variables' as *;
+@use '@styles/mixins' as *;
 
 .specialOffers {
+  @include gradientBackground();
   margin-top: 120px;
   min-height: 330px;
   padding: 60px 0;
-
-  background: rgb(255, 204, 165);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 204, 165, 1) 0%,
-    rgba(255, 204, 165, 1) 20%,
-    rgba(255, 220, 194, 1) 100%
-  );
   position: relative;
 }
 
 .underlay {
-  background-color: rgba($color: $white, $alpha: 0.2);
+  @include underlayBackground();
   padding: 30px;
   border-radius: 12px;
   max-width: 569px;
@@ -27,7 +21,6 @@
 .title {
   font-weight: $fw800;
   font-size: $fs32;
-  color: $dark;
 }
 
 .text {

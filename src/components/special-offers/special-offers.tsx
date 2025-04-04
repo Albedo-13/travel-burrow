@@ -1,4 +1,4 @@
-import image from '@assets/images/offers-woman.png';
+import image from '@assets/images/offers-woman.webp';
 
 import styles from './special-offers.module.scss';
 

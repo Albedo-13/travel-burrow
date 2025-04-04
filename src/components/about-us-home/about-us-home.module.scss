@@ -23,14 +23,12 @@
 .subtitle {
   font-weight: $fw600;
   font-size: $fs16;
-  color: $dark;
   opacity: 0.6;
 }
 
 .title {
   font-weight: $fw800;
   font-size: $fs32;
-  color: $dark;
   margin-top: 6px;
 }
 
@@ -38,7 +36,6 @@
   font-weight: $fw400;
   font-size: $fs18;
   line-height: 178%;
-  color: $dark;
   margin-top: 32px;
 }
 
@@ -53,8 +50,8 @@
   .statsText {
     font-weight: $fw400;
     font-size: $fs16;
-    color: $dark;
     opacity: 0.6;
     margin-top: 6px;
+    color: $dark;
   }
 }
