@@ -1,9 +1,9 @@
-import { counterStore } from './counter-store';
 import { hotelsStore } from './hotels-store';
+import { testimonialsStore } from './testimonials-store';
 
 class RootStore {
-  counterStore = counterStore;
   hotelsStore = hotelsStore;
+  testimonialsStore = testimonialsStore;
 }
 
 export const rootStore = new RootStore();

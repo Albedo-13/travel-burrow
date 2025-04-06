@@ -21,21 +21,19 @@ export const PopularHotels = observer(() => {
   return (
     <section className={styles.popularHotels}>
       <div className="container">
-        <div className={styles.header}>
-          <h2 className={styles.title}>Popular Hotels</h2>
-          <button
-            className={clsx('buttonSecondary', styles.buttonPrev)}
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            {'<'}
-          </button>
-          <button
-            className={clsx('buttonPrimary', styles.buttonNext)}
-            onClick={() => swiperRef.current?.slideNext()}
-          >
-            {'>'}
-          </button>
-        </div>
+        <h2 className={styles.title}>Popular Hotels</h2>
+        <button
+          className={clsx('buttonSecondary', styles.buttonPrev)}
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          {'<'}
+        </button>
+        <button
+          className={clsx('buttonPrimary', styles.buttonNext)}
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          {'>'}
+        </button>
         {isLoading ? (
           <Skeleton variant="rectangular" width="100%" height={327} />
         ) : (
@@ -43,7 +41,6 @@ export const PopularHotels = observer(() => {
             loop={true}
             spaceBetween={30}
             slidesPerView={4}
-            onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper: Swiper) => {
               swiperRef.current = swiper;
             }}

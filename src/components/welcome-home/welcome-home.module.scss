@@ -5,7 +5,7 @@
 .welcome {
   min-height: 1020px;
   background: center center / cover no-repeat
-    url('../../assets/images/home-page-bg.webp');
+    url('@/assets/images/home-page-bg.webp');
 
   display: flex;
   flex-direction: column;

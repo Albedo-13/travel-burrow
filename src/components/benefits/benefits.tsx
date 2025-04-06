@@ -1,7 +1,7 @@
-import benefit1 from '@assets/images/benefit-1.webp';
-import benefit2 from '@assets/images/benefit-2.webp';
-import benefit3 from '@assets/images/benefit-3.webp';
-import benefit4 from '@assets/images/benefit-4.webp';
+import benefit1 from '@assets/images/benefits/benefit-1.webp';
+import benefit2 from '@assets/images/benefits/benefit-2.webp';
+import benefit3 from '@assets/images/benefits/benefit-3.webp';
+import benefit4 from '@assets/images/benefits/benefit-4.webp';
 
 import styles from './benefits.module.scss';
 

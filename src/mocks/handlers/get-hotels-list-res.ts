@@ -4,7 +4,7 @@ import { http, HttpResponse } from 'msw';
 export const getHotelsListMockRes = http.get(
   'https://hotels4.p.rapidapi.com/properties/list',
   () => {
-    console.log('capture!');
+    console.log('capture: properties/list');
     return HttpResponse.json({
       result: 'OK',
       data: {

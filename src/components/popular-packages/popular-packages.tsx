@@ -1,21 +1,22 @@
-import bestPrice from '@assets/icons/best-price.png';
-import bottleOfWater from '@assets/icons/bottle-of-water.png';
-import cityApp from '@assets/icons/city-app.png';
-import companion from '@assets/icons/companion.png';
-import discountOnRickshaw from '@assets/icons/discount-on-rickshaw.png';
-import guaranteedSupport from '@assets/icons/guaranteed-support.png';
-import guideForYou from '@assets/icons/guide-for-you.png';
-import mountainBikeIncluded from '@assets/icons/mountain-bike-included.png';
-import parkTicket from '@assets/icons/park-ticket.png';
-import personalDriver from '@assets/icons/personal-driver.png';
-import returnBus from '@assets/icons/return-bus.png';
-import whereverYouWant from '@assets/icons/wherever-you-want.png';
-import yourBikeforADay from '@assets/icons/your-bike-for-a-day.png';
-import package1 from '@assets/images/package-1.webp';
-import package2 from '@assets/images/package-2.webp';
-import package3 from '@assets/images/package-3.webp';
-import package4 from '@assets/images/package-4.webp';
+import bestPrice from '@assets/icons/popular-packages/best-price.png';
+import bottleOfWater from '@assets/icons/popular-packages/bottle-of-water.png';
+import cityApp from '@assets/icons/popular-packages/city-app.png';
+import companion from '@assets/icons/popular-packages/companion.png';
+import discountOnRickshaw from '@assets/icons/popular-packages/discount-on-rickshaw.png';
+import guaranteedSupport from '@assets/icons/popular-packages/guaranteed-support.png';
+import guideForYou from '@assets/icons/popular-packages/guide-for-you.png';
+import mountainBikeIncluded from '@assets/icons/popular-packages/mountain-bike-included.png';
+import parkTicket from '@assets/icons/popular-packages/park-ticket.png';
+import personalDriver from '@assets/icons/popular-packages/personal-driver.png';
+import returnBus from '@assets/icons/popular-packages/return-bus.png';
+import whereverYouWant from '@assets/icons/popular-packages/wherever-you-want.png';
+import yourBikeforADay from '@assets/icons/popular-packages/your-bike-for-a-day.png';
+import package1 from '@assets/images/popular-packages/package-1.webp';
+import package2 from '@assets/images/popular-packages/package-2.webp';
+import package3 from '@assets/images/popular-packages/package-3.webp';
+import package4 from '@assets/images/popular-packages/package-4.webp';
 import clsx from 'clsx';
+import { observer } from 'mobx-react-lite';
 
 import { useStores } from '@/hooks/use-stores';
 
@@ -120,7 +121,7 @@ const popularPackages = [
   },
 ];
 
-export const PopularPackages = () => {
+export const PopularPackages = observer(() => {
   const {
     hotelsStore: { currency },
   } = useStores();
@@ -141,13 +142,15 @@ export const PopularPackages = () => {
                 </div>
                 <ul className={styles.benefits}>
                   {benefits.map((benefit) => (
-                    <li className={styles.benefit}>
+                    <li key={benefit.label} className={styles.benefit}>
                       <img src={benefit.icon} alt={benefit.label} />
                       <span>{benefit.label}</span>
                     </li>
                   ))}
                 </ul>
-                <button className={clsx(styles.button, "buttonOutlineAccent")}>Book Now</button>
+                <button className={clsx(styles.button, 'buttonOutlineAccent')}>
+                  Book Now
+                </button>
               </div>
             </div>
           ))}
@@ -155,4 +158,4 @@ export const PopularPackages = () => {
       </div>
     </section>
   );
-};
+});

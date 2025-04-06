@@ -24,6 +24,11 @@
   max-width: 300px;
   border: 1px solid $gray;
   border-radius: 24px;
+  transition: 0.2s all ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .image {
@@ -38,6 +43,7 @@
 .name {
   font-weight: $fw800;
   font-size: $fs20;
+  text-transform: uppercase;
 }
 
 .price {
