@@ -47,19 +47,23 @@
 }
 
 .item {
-  a {
-    font-size: $fs20;
-    font-weight: $fw600;
-    color: $white;
-    text-decoration: none;
-    text-decoration-color: $accent;
+  font-size: $fs20;
+  font-weight: $fw600;
+  color: $white;
+  text-decoration: none;
+  text-decoration-color: $accent;
 
-    &:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-decoration-color: $accent;
-    }
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: $accent;
   }
+}
+
+.itemActive {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: $accent;
 }
 
 .logo {

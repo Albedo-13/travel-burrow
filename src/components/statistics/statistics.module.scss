@@ -1,19 +1,19 @@
 @use '@styles/colors' as *;
 @use '@styles/variables' as *;
 
-.aboutUs {
+.statistics {
   padding: 60px 0;
 }
 
 .image {
-  width: 450px;
   height: auto;
 }
 
-.aboutUsWrapper {
+.statisticsWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
 
 .contentWrapper {
@@ -42,7 +42,7 @@
 .stats {
   margin-top: 32px;
   display: flex;
-  gap: 50px;
+  gap: 40px;
   color: $accent;
   font-weight: $fw700;
   font-size: $fs32;

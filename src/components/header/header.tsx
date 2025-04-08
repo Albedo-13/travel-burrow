@@ -2,6 +2,7 @@ import '@styles/_buttons.scss';
 
 import logo from '@assets/icons/logo.webp';
 import clsx from 'clsx';
+import { NavLink, NavLinkRenderProps } from 'react-router';
 
 import styles from './header.module.scss';
 
@@ -20,23 +21,51 @@ export const Header = ({ isFullWidth }: HeaderProps) => {
           'container'
         )}
       >
-        <a href="/">
+        <NavLink to="/">
           <img src={logo} className={styles.logo} alt="logo" />
-        </a>
+        </NavLink>
 
         <nav>
           <ul className={styles.list}>
-            <li className={styles.item}>
-              <a href="">Home</a>
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }: NavLinkRenderProps) =>
+                  clsx(styles.item, isActive && styles.itemActive)
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li className={styles.item}>
-              <a href="">About Us</a>
+              <NavLink
+                to="/about-us"
+                className={({ isActive }: NavLinkRenderProps) =>
+                  clsx(styles.item, isActive && styles.itemActive)
+                }
+              >
+                About Us
+              </NavLink>
             </li>
             <li className={styles.item}>
-              <a href="">Tour Packages</a>
+              <NavLink
+                to="/tour-packages"
+                className={({ isActive }: NavLinkRenderProps) =>
+                  clsx(styles.item, isActive && styles.itemActive)
+                }
+              >
+                Tour Packages
+              </NavLink>
             </li>
             <li className={styles.item}>
-              <a href="">Contact Us</a>
+              <NavLink
+                to="/contact-us"
+                className={({ isActive }: NavLinkRenderProps) =>
+                  clsx(styles.item, isActive && styles.itemActive)
+                }
+              >
+                Contact Us
+              </NavLink>
             </li>
           </ul>
         </nav>

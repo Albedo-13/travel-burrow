@@ -43,6 +43,7 @@ export const Testimonials = observer(() => {
             onSwiper={(swiper: Swiper) => {
               swiperRef.current = swiper;
             }}
+            className={styles.swiperComponent}
           >
             {testimonialsList?.map((hotel) => (
               <SwiperSlide

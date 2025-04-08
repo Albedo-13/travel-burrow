@@ -1,0 +1,35 @@
+@use '@styles/colors' as *;
+@use '@styles/variables' as *;
+
+.welcome {
+  min-height: 1020px;
+  background: center center / cover no-repeat
+    url('@/assets/images/about-us-bg.webp');
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: Podcast, sans-serif;
+  color: $white;
+  font-weight: $fw400;
+  font-size: $fs72;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.subtitle {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white;
+  font-weight: $fw700;
+  font-size: $fs24;
+  margin-bottom: 24px;
+  text-align: center;
+  max-width: 850px;
+}

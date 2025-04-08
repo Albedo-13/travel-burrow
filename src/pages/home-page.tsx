@@ -1,8 +1,8 @@
-import { AboutUsHome } from '@components/about-us-home/about-us-home';
 import { Footer } from '@components/footer/footer';
 import { Header } from '@components/header/header';
 import { PopularHotels } from '@components/popular-hotels/popular-hotels';
 import { SpecialOffers } from '@components/special-offers/special-offers';
+import { Statistics } from '@components/statistics/statistics';
 import { Testimonials } from '@components/testimonials/testimonials';
 import { WelcomeHome } from '@components/welcome-home/welcome-home';
 import { useStores } from '@hooks/use-stores';
@@ -43,7 +43,7 @@ export const HomePage = observer(() => {
       <Header isFullWidth={true} />
       <WelcomeHome />
       <PopularHotels />
-      <AboutUsHome />
+      <Statistics variant="home" />
       <SpecialOffers />
       <Suspense
         fallback={<Skeleton variant="rectangular" width="100%" height={500} />}

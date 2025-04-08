@@ -25,7 +25,6 @@ export const WelcomeHome = observer(() => {
             }
           >
             <SearchForm />
-            {/* <Skeleton variant="rectangular" width="100%" height={163} /> */}
           </Suspense>
         </div>
       </div>

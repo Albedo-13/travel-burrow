@@ -5,13 +5,12 @@ import { ThemeProvider } from '@mui/material';
 import { rootStore } from '@stores/root-store';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { RouterProvider } from 'react-router';
 
-import { App } from '@/components/app/app';
-
+import { router } from './router-provider';
 import { theme } from './styles/mui-theme';
 
 async function enableMocking() {
-  // TODO: удалить?
   // if (process.env.NODE_ENV !== 'development') {
   //   return;
   // }
@@ -24,7 +23,7 @@ enableMocking().then(() => {
     <StrictMode>
       <RootStoreContext.Provider value={rootStore}>
         <ThemeProvider theme={theme}>
-          <App />
+          <RouterProvider router={router} />
         </ThemeProvider>
       </RootStoreContext.Provider>
     </StrictMode>
