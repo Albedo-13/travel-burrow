@@ -7,23 +7,35 @@ import { NavLink, NavLinkRenderProps } from 'react-router';
 import styles from './header.module.scss';
 
 type HeaderProps = {
-  isFullWidth: boolean;
+  variant: 'home' | 'about' | 'tours';
 };
 
-export const Header = ({ isFullWidth }: HeaderProps) => {
+export const Header = ({ variant }: HeaderProps) => {
   return (
     <header
-      className={clsx(isFullWidth ? styles.headerFullWidth : styles.header)}
+      className={clsx(
+        {
+          home: styles.headerHome,
+          about: styles.headerAbout,
+          tours: styles.headerTours,
+        }[variant]
+      )}
     >
       <div
         className={clsx(
-          isFullWidth ? styles.headerWrapperFullWidth : styles.headerWrapper,
+          {
+            home: styles.headerWrapperHome,
+            about: styles.headerWrapperAbout,
+            tours: styles.headerWrapperTours,
+          }[variant],
           'container'
         )}
       >
-        <NavLink to="/">
-          <img src={logo} className={styles.logo} alt="logo" />
-        </NavLink>
+        {variant !== 'tours' && (
+          <NavLink to="/">
+            <img src={logo} className={styles.logo} alt="logo" />
+          </NavLink>
+        )}
 
         <nav>
           <ul className={styles.list}>
@@ -71,10 +83,22 @@ export const Header = ({ isFullWidth }: HeaderProps) => {
         </nav>
 
         <div className={styles.buttons}>
-          <button className="buttonBase">Login</button>
+          <button
+            className={clsx(
+              'buttonBase',
+              variant === 'tours' && styles.loginButton
+            )}
+          >
+            Login
+          </button>
           <button className="buttonPrimary">Sign Up</button>
         </div>
       </div>
+      {variant === 'tours' && (
+        <div className="container">
+          <hr className={styles.separator} />
+        </div>
+      )}
     </header>
   );
 };

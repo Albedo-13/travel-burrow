@@ -23,7 +23,7 @@ enableMocking().then(() => {
     <StrictMode>
       <RootStoreContext.Provider value={rootStore}>
         <ThemeProvider theme={theme}>
-          <RouterProvider router={router} />
+            <RouterProvider router={router} />
         </ThemeProvider>
       </RootStoreContext.Provider>
     </StrictMode>

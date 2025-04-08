@@ -1,0 +1,22 @@
+@use '@styles/variables' as *;
+
+.hotelsList {
+  padding: 60px 0 160px 0;
+}
+
+.title {
+  font-weight: $fw800;
+  font-size: $fs32;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 64px 32px;
+  margin-top: 60px;
+}
+
+.hotel {
+  width: 295px;
+}

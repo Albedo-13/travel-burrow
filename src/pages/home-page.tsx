@@ -40,7 +40,7 @@ export const HomePage = observer(() => {
 
   return (
     <>
-      <Header isFullWidth={true} />
+      <Header variant="home" />
       <WelcomeHome />
       <PopularHotels />
       <Statistics variant="home" />

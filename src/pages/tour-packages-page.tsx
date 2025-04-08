@@ -1,7 +1,7 @@
-
 import { BookBike } from '@components/book-bike/book-bike';
 import { Footer } from '@components/footer/footer';
 import { Header } from '@components/header/header';
+import { HotelsList } from '@components/hotels-list/hotels-list';
 import { Testimonials } from '@components/testimonials/testimonials';
 import { useStores } from '@hooks/use-stores';
 import { observer } from 'mobx-react-lite';
@@ -20,9 +20,8 @@ export const TourPackagesPage = observer(() => {
 
   return (
     <>
-      <Header isFullWidth={false} />
-      
-      <div style={{ height: 200, backgroundColor: 'antiquewhite' }}></div>
+      <Header variant="tours" />
+      <HotelsList />
       <BookBike />
       <Testimonials />
       <Footer />

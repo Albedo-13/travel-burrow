@@ -19,7 +19,7 @@ export const AboutUsPage = observer(() => {
 
   return (
     <>
-      <Header isFullWidth={false} />
+      <Header variant="about" />
       <WelcomeAboutUs />
       <Statistics variant="about" />
       <Advantages />

@@ -2,16 +2,7 @@
 @use '@styles/variables.scss' as *;
 @use '@styles/mixins' as *;
 
-.header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  transform: translateX(-50%);
-  left: 50%;
-}
-
-.headerFullWidth {
+.headerHome {
   @include underlayBackground();
   width: 100%;
   display: flex;
@@ -20,7 +11,33 @@
   position: absolute;
 }
 
-.headerWrapper {
+.headerAbout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.headerTours {
+  .item {
+    color: $dark;
+  }
+}
+
+.loginButton {
+  color: $dark;
+}
+
+.headerWrapperHome {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerWrapperAbout {
   @include underlayBackground();
   width: 100%;
   display: flex;
@@ -33,11 +50,11 @@
   }
 }
 
-.headerWrapperFullWidth {
-  width: 100%;
+.headerWrapperTours {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  padding: 30px 0;
 }
 
 .list {
@@ -74,4 +91,9 @@
   & > :first-child {
     margin-right: 10px;
   }
+}
+
+.separator {
+  opacity: 0.1;
+  margin: 0;
 }
