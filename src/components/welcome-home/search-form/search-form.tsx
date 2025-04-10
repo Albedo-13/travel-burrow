@@ -12,15 +12,35 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { observer } from 'mobx-react-lite';
+import { SyntheticEvent, useState } from 'react';
+import { useNavigate } from 'react-router';
 
 import { MAX_HOTEL_PRICE, MIN_HOTEL_PRICE } from '@/constants';
+import { Hotel } from '@/types/hotel';
 
 import styles from './search-form.module.scss';
 
 export const SearchForm = observer(() => {
+  const [selectedHotel, setSelectedHotel] = useState<Hotel | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
+
   const {
     hotelsStore: { hotelsList, currency },
   } = useStores();
+
+  const onSearchClick = () => {
+    if (selectedHotel) {
+      navigate(`/tour-packages/${selectedHotel.id}`);
+    } else {
+      setError('Please select a hotel');
+    }
+  };
+
+  const onHotelChange = (_: SyntheticEvent, value: Hotel | null) => {
+    setSelectedHotel(value);
+    setError(null);
+  };
 
   return (
     <>
@@ -73,11 +93,15 @@ export const SearchForm = observer(() => {
         <Autocomplete
           options={hotelsList}
           getOptionLabel={(option) => option?.name}
+          value={selectedHotel}
+          onChange={onHotelChange}
           renderInput={(params) => (
             <TextField
               {...params}
               label="Hotel"
               placeholder="Select Hotel"
+              error={!!error}
+              helperText={error ? 'Please select a hotel' : ''}
               slotProps={{
                 input: {
                   ...params.InputProps,
@@ -92,7 +116,7 @@ export const SearchForm = observer(() => {
           )}
         />
 
-        <button className={styles.searchButton}>
+        <button className={styles.searchButton} onClick={onSearchClick}>
           <SearchIcon color="info" />
         </button>
       </div>

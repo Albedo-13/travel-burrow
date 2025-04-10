@@ -6,7 +6,6 @@ export async function getHotelsList() {
   return axios
     .get('https://hotels4.p.rapidapi.com/properties/list', options)
     .then((res) => {
-      console.log(res.data);
       return res.data;
     });
 }

@@ -2,7 +2,7 @@ import '@styles/_buttons.scss';
 
 import logo from '@assets/icons/logo.webp';
 import clsx from 'clsx';
-import { NavLink, NavLinkRenderProps } from 'react-router';
+import { Link, NavLink, NavLinkRenderProps } from 'react-router';
 
 import styles from './header.module.scss';
 
@@ -70,14 +70,9 @@ export const Header = ({ variant }: HeaderProps) => {
               </NavLink>
             </li>
             <li className={styles.item}>
-              <NavLink
-                to="/contact-us"
-                className={({ isActive }: NavLinkRenderProps) =>
-                  clsx(styles.item, isActive && styles.itemActive)
-                }
-              >
+              <Link to="#" className={styles.item}>
                 Contact Us
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </nav>

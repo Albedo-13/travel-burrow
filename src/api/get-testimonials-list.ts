@@ -6,7 +6,6 @@ export async function getTestimonialsList() {
   return axios
     .get('https://hotels4.p.rapidapi.com/reviews/v2/list', options)
     .then((res) => {
-      console.log(res.data);
       return res.data;
     });
 }

@@ -6,6 +6,7 @@ import { Hotel } from '@/types/hotel';
 
 class HotelsStore {
   hotelsList: Hotel[] = [];
+  selectedHotel: Hotel | null = null;
   currency: Currency = {
     code: '',
     format: '',
@@ -21,12 +22,13 @@ class HotelsStore {
   get sliced16HotelsList() {
     return this.hotelsList.slice(0, 16);
   }
-  
-  getHotelByIdAction = (id: number) => {
-    return this.hotelsList.find((hotel) => hotel.id === id);
-  }
 
-  // ! TODO: фильтрация. Если выбран отель - на страницу отеля. Иначе на страницу списка
+  getHotelByIdAction = async (id: number) => {
+    await this.getHotelsListAction();
+
+    this.selectedHotel =
+      this.hotelsList.find((hotel) => hotel.id === id) ?? null;
+  };
 
   getHotelsListAction = async () => {
     try {
