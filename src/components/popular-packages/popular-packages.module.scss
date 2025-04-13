@@ -79,3 +79,9 @@
   margin-top: 16px;
   width: 100%;
 }
+
+@media (max-width: $tablet) {
+  .popularPackages {
+    padding: 60px 0;
+  }
+}

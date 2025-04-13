@@ -44,6 +44,24 @@ export const PopularHotels = observer(() => {
             onSwiper={(swiper: Swiper) => {
               swiperRef.current = swiper;
             }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              1200: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            }}
           >
             {sliced16HotelsList?.map((hotel) => (
               <SwiperSlide key={hotel.id}>

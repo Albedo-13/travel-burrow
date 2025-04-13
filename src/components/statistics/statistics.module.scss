@@ -55,3 +55,25 @@
     color: $dark;
   }
 }
+
+@media (max-width: $desktop) {
+  .statisticsWrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contentWrapper {
+    max-width: 100%;
+  }
+
+  .image {
+    max-height: 500px;
+    max-width: 100%;
+  }
+}

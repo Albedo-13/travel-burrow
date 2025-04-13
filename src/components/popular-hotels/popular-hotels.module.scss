@@ -15,7 +15,7 @@
   font-weight: $fw400;
   position: absolute;
   top: 0;
-  right: 75px;
+  right: 100px;
   color: $dark;
 }
 
@@ -23,5 +23,17 @@
   font-weight: $fw400;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 20px;
+}
+
+@media (max-width: $tablet) {
+  .popularHotels {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .title {
+    visibility: hidden;
+  }
 }

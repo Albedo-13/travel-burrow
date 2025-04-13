@@ -35,3 +35,23 @@
   padding: 20px;
   border-radius: 12px;
 }
+
+@media (max-width: $desktopFull) {
+  .welcome {
+    min-height: 1220px;
+  }
+}
+
+@media (max-width: $desktopS) {
+  .welcome {
+    min-height: 1100px;
+  }
+
+  .title {
+    font-size: $fs48;
+  }
+
+  .subtitle {
+    font-size: $fs20;
+  }
+}

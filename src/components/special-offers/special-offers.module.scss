@@ -33,3 +33,18 @@
   right: 0;
   bottom: -72px;
 }
+
+@media (max-width: $desktop) {
+  .image {
+    display: none;
+  }
+
+  .specialOffers {
+    margin-top: 0;
+    min-height: auto;
+  }
+
+  .underlay {
+    max-width: 100%;
+  }
+}

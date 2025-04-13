@@ -30,3 +30,9 @@
 .subtitle {
   margin-top: 12px;
 }
+
+@media (max-width: $tablet) {
+  .benefits {
+    padding: 60px 0;
+  }
+}

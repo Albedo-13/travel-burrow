@@ -55,3 +55,23 @@
     border-radius: 4px;
   }
 }
+
+@media (max-width: $desktopFull) {
+  .image {
+    display: none;
+  }
+
+  .wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: $tablet) {
+  .underlay {
+    width: auto;
+  }
+
+  .input {
+    flex: 100%;
+  }
+}

@@ -7,8 +7,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  min-height: 170px;
   position: absolute;
+  min-height: 170px;
 }
 
 .headerAbout {
@@ -96,4 +96,50 @@
 .separator {
   opacity: 0.1;
   margin: 0;
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: $desktopS) {
+  .headerWrapperAbout {
+    & > :last-child {
+      padding-right: 0;
+    }
+  }
+
+  .list {
+    gap: 20px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .nav {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .menuItem {
+    .item {
+      color: $dark;
+    }
+  }
+
+  .headerHome {
+    min-height: auto;
+  }
+
+  .headerWrapperHome {
+    padding: 8px 16px 20px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .logo {
+    display: none;
+  }
 }

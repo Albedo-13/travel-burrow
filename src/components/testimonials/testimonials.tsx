@@ -39,11 +39,17 @@ export const Testimonials = observer(() => {
           <SwiperComponent
             loop={true}
             spaceBetween={30}
-            slidesPerView={2}
+            slidesPerView={1}
             onSwiper={(swiper: Swiper) => {
               swiperRef.current = swiper;
             }}
             className={styles.swiperComponent}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+            }}
           >
             {testimonialsList?.map((hotel) => (
               <SwiperSlide
